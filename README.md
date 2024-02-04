@@ -6,8 +6,8 @@ const isMultipleOf3 = (n: number) => n % 3 === 0;
 const isMultipleOf5 = (n: number) => n % 5 === 0;
 
 const result = (max: number) =>
-  Array.from({ length: max }, (_, i) => i).reduce((acc, curr, idx) => {
-    return isMultipleOf3(idx) || isMultipleOf5(idx) ? curr + acc : acc;
+  Array.from({ length: max }, (_, i) => i).reduce((acc, curr) => {
+    return isMultipleOf3(curr) || isMultipleOf5(curr) ? curr + acc : acc;
   }, 0);
 
 // Display Result
